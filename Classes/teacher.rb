@@ -10,6 +10,3 @@ class Teacher < Person
     true
   end
 end
-
-teacher = Teacher.new("Arts and theater", "Clinton")
-teacher.can_use_services
