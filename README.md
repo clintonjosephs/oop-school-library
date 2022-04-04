@@ -1,7 +1,6 @@
-# Enumerable Ruby
+# OOP School Library
 
-> Implemented in this repository is a module inside a class, and a enumerable. The module enumerable will implement a subset of the functionality of Enumerable.
-
+> Implemented a simple school library app using the full concepts of object oriented programming in ruby. This application takes input and returns the corresponding results from the terminal.
 
 ## Built With
 
@@ -11,8 +10,8 @@
 To get a local copy up and running follow these simple steps.
 
 ```bash
-$ git@github.com:clintonjosephs/enumerable-ruby.git
-$ cd enumerable-ruby
+$ git@github.com:clintonjosephs/oop-school-library.git
+$ cd oop-school-library
 
 ```
 
@@ -23,19 +22,13 @@ Clone the repo and run bundle install in the command line to install the depende
 bundle install
 ```
 
-## Authors
+## Author
 
 👤 **Clinton Mbonu**
 
 - GitHub: [@clintonjosephs](https://github.com/clintonjosephs)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/clinton-mbonu)
 - Twitter: [@clintonmbonu2](https://twitter.com/clintonmbonu2)
-
-👤 **Aniekan udo**
-
-- GitHub: [@Anny85-code](https://github.com/Anny85-code)
-- Twitter: [@Annyudo8](https://twitter.com/Anny_udo8)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/aniekan-udo-665b65213/)
 
 
 ## 🤝 Contributing
