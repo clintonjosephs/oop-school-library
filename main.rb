@@ -22,8 +22,8 @@ print classroom.student.map(&:name)
 book1 = Book.new('Harry Potter', 'John Benner')
 book3 = Book.new('How to get away with profit', 'Mercy green')
 
-rental1 = Rental.new(book1, student1)
-rental3 = Rental.new(book3, student1)
+rental1 = Rental.new('2020-11-02', book1, student1)
+rental3 = Rental.new('2020-11-03', book3, student1)
 
 puts ' '
 print rental1.person
