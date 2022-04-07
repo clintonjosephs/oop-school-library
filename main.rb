@@ -1,10 +1,11 @@
 require './app'
-
 state = { books: [], people: [] }
+
 puts 'Welcome to School Library App'
 
 def menu_display
-  'Please choose an option by entering a number:
+  puts ' '
+  puts 'Please choose an option by entering a number:
         1 - List all books
         2 - List all people
         3 - Create a person
@@ -12,17 +13,12 @@ def menu_display
         5 - Create a rental
         6 - List all rentals for a given person id
         7 - Exit'
+  gets.chomp
 end
 
 def main(data)
-  puts ' '
-
-  puts menu_display
-
-  user_input = gets.chomp
   app = App.new
-
-  case user_input
+  case menu_display
   when '1'
     app.list_all_books(data[:books])
   when '2'
@@ -36,7 +32,6 @@ def main(data)
   when '6'
     app.list_rentals(data[:people])
   when '7'
-    puts ''
     puts 'Thank you for using this app!'
     return
   else
