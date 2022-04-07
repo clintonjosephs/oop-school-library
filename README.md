@@ -2,6 +2,8 @@
 
 > Implemented a simple school library app using the full concepts of object oriented programming in ruby. This application takes input and returns the corresponding results from the terminal.
 
+![screenshot](./demo.gif)
+
 ## Built With
 
 - Ruby
@@ -19,7 +21,8 @@ $ cd oop-school-library
 Clone the repo and run bundle install in the command line to install the dependencies
 
 ```bash
-bundle install
+- bundle install
+- ruby main.rb
 ```
 
 ## Author
