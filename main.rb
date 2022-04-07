@@ -1,35 +1,48 @@
-require './person'
-require './student'
-require './classroom'
-require './rental'
-require './book'
-require './teacher'
+require './app'
 
-classroom = Classroom.new('JS 2 A')
-student1 = Student.new(18, 'JS2 A', name: 'Clinton', parent_permission: false)
+state = { books: [], people: [] }
+puts 'Welcome to School Library App'
 
-puts student1.play_hooky
-puts classroom.label
-puts student1.classroom = classroom
-print classroom.student
-puts ' '
+def menu_display
+  'Please choose an option by entering a number:
+        1 - List all books
+        2 - List all people
+        3 - Create a person
+        4 - Create a book
+        5 - Create a rental
+        6 - List all rentals for a given person id
+        7 - Exit'
+end
 
-student2 = Student.new(21, 'JS2 A', name: 'John', parent_permission: true)
-student2.classroom = classroom
+def main(data)
+  puts ' '
 
-print classroom.student.map(&:name)
+  puts menu_display
 
-book1 = Book.new('Harry Potter', 'John Benner')
-book3 = Book.new('How to get away with profit', 'Mercy green')
+  user_input = gets.chomp
+  app = App.new
 
-rental1 = Rental.new('2020-11-02', book1, student1)
-rental3 = Rental.new('2020-11-03', book3, student1)
+  case user_input
+  when '1'
+    app.list_all_books(data[:books])
+  when '2'
+    app.list_all_people(data[:people])
+  when '3'
+    app.create_person(data[:people])
+  when '4'
+    app.create_book(data[:books])
+  when '5'
+    app.create_rental(data)
+  when '6'
+    app.list_rentals(data[:people])
+  when '7'
+    puts ''
+    puts 'Thank you for using this app!'
+    return
+  else
+    puts 'Invalid selection'
+  end
+  main(data)
+end
 
-puts ' '
-print rental1.person
-
-puts ' '
-print rental3.person
-
-puts ' '
-print(book1.rentals.map { |rental| rental.person.name })
+main(state)

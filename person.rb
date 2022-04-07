@@ -26,7 +26,7 @@ class Person < Nameable
   end
 
   def add_rental(book, date)
-    @rentals << Rental.new(date, book, self)
+    @rentals.push(Rental.new(date, book, self)) unless @rentals.include?(Rental.new(date, book, self))
   end
 
   private :of_age?
