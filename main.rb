@@ -33,7 +33,7 @@ def main(data)
   when '6'
     app.list_rentals(data[:people])
   when '7'
-    puts 'Thank you for using this app!'
+    puts 'Thank you for using this app! 👍 😊 💪'
     return
   else
     puts 'Invalid selection'
