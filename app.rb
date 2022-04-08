@@ -110,11 +110,13 @@ class App
 
     print 'ID of the person: '
 
-    person_id = gets.chomp.to_i
+    person_id = gets.chomp
+    # getting person id from user
     person_fetch = people.select { |person| person.id == person_id }
 
     puts 'Rentals: '
-    person_fetch[0].rentals.each do |rental|
+    # track rentals
+    person_fetch[0].rentals[0].each do |rental|
       puts "Date: #{rental.date} Book: \"#{rental.book.title}\" by #{rental.book.author}"
     end
   end
