@@ -105,6 +105,7 @@ class App
     puts "New rental created for #{person_obj.name}"
   end
 
+  # the list_rentals method is not working properly
   def list_rentals(people)
     puts 'Sorry no people available at the moment' if people.empty?
 
