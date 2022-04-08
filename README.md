@@ -1,7 +1,13 @@
 # OOP School Library
 
-> Implemented a simple school library app using the full concepts of object oriented programming in ruby. This application takes input and returns the corresponding results from the terminal.
+> In this repository, I implemented a tool to record what books are in an imaginary library and who borrows them. The app that you allows users to:
+> - Add new students or teachers.
+> - Add new books.
+> - Save records of who borrowed a given book and when.
+> - And all of this is built in a beautiful and well-organized way!
 
+
+#
 ![screenshot](./demo.gif)
 
 ## Built With
