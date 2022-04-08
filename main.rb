@@ -1,5 +1,6 @@
 require './app'
 state = { books: [], people: [] }
+# hash data structure
 
 puts 'Welcome to School Library App'
 
