@@ -1,5 +1,6 @@
 require_relative 'modules/person_module'
 require_relative 'modules/rental_module'
+require_relative 'modules/books_module'
 
 class App
   attr_accessor :rentals, :books, :people
@@ -50,4 +51,3 @@ class App
     menu_selection
   end
 end
-
