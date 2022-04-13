@@ -27,6 +27,4 @@ class Student < Person
       'parent_permission' => @parent_permission
     }
   end
-
-
 end

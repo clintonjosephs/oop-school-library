@@ -22,5 +22,4 @@ class Teacher < Person
       'parent_permission' => @parent_permission
     }
   end
-
 end
