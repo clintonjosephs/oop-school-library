@@ -1,4 +1,4 @@
-require './App'
+require './classes/app'
 
 def main
   puts 'Welcome to School Library App'

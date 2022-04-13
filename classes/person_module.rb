@@ -1,11 +1,14 @@
-require './student'
-require './teacher'
+require_relative 'student'
+require_relative 'teacher'
 
 class PersonModule
-  attr_accessor :persons
+  attr_accessor :persons, :file_location
 
-  def initialize(persons)
-    @persons = persons
+  def initialize
+    @file_location = 'storage/people.json'
+    file = File.open(@file_location, 'a+')
+    @persons = file.size.zero? ? [] : JSON.parse(file.read)
+    file.close
   end
 
   def create_person
@@ -28,14 +31,19 @@ class PersonModule
   end
 
   def create_teacher(person, name, age)
+    file = File.open(@file_location, 'w')
     print 'Specialization: '
     specialization = gets.chomp
     teacher = Teacher.new(specialization, name, age)
+    teacher = teacher.to_json
     person << teacher
+    file.write(JSON[person])
+    file.close
     puts 'Teacher created successfully'
   end
 
   def create_student(person, name, age)
+    file = File.open(@file_location, 'w')
     print 'Has parent permission? [Y/N]: '
     has_permission = gets.chomp.downcase
     student = ''
@@ -48,12 +56,17 @@ class PersonModule
       puts 'invalid selection for permission'
       return
     end
+    student = student.to_json
     person << student
+    file.write(JSON[person])
+    file.close
     puts 'Student created successfully'
   end
 
   def list_all_people
     puts 'Sorry no people available at the moment' if @persons.empty?
-    @persons.each { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
+    @persons.each do |person|
+      puts "[#{person['json_class']}] Name: #{person['name']}, ID: #{person['id']}, Age: #{person['age']}"
+    end
   end
 end
