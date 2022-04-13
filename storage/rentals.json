@@ -1,0 +1,1 @@
+[{"json_class":"Rental","date":"2020/10/11","book":{"json_class":"Book","title":"John","author":"Fisher"},"person":{"json_class":"Teacher","id":825,"age":"47","name":"Benny Adams","specialization":"Fishing","parent_permission":true}}]
