@@ -2,7 +2,7 @@ require_relative 'interface'
 
 class Person < Nameable
   attr_accessor :name, :age, :id, :parent_permission
-  attr_reader :rentals, :parent_permission
+  attr_reader :rentals
 
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
