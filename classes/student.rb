@@ -16,4 +16,17 @@ class Student < Person
     @classroom = classroom
     classroom.student.push(self) unless classroom.student.include?(self)
   end
+
+  def to_json(*_args)
+    {
+      JSON.create_id => self.class.name,
+      'id' => @id,
+      'age' => @age,
+      'name' => @name,
+      'classroom' => @classroom,
+      'parent_permission' => @parent_permission
+    }
+  end
+
+
 end
