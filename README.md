@@ -8,7 +8,7 @@
 
 
 #
-![screenshot](./demo.gif)
+![screenshot](./uml_class_diagram.png)
 
 ## Built With
 
